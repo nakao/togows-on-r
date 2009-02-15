@@ -1,0 +1,5 @@
+TogoWS RESTful API for R by Mitsuteru Nakao <n@bioruby.org>
+
+= To build the R package =
+
+$ R CMD build togows
