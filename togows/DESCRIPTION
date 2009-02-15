@@ -1,0 +1,11 @@
+Package: togows
+Type: Package
+Title: TogoWS RESTful API client for entry and search resources.
+Version: 1.0
+Date: 2009-02-15
+Author: Mitsuteru Nakao
+Maintainer: Mitsuteru Nakao <n@bioruby.org>
+Description: Getting entry and search result of life science databases via TogoWS RESTful API.
+License: GPL
+LazyLoad: yes
+Depends: RCurl
