@@ -1,8 +1,9 @@
-TogoWS RESTful API for R by Mitsuteru Nakao <n@bioruby.org>
+TogoWS RESTful API for R by Mitsuteru Nakao <n@bioruby.org> <mn@kazusa.or.jp>
 
-* http://togows.dbcls.jp/site/en/rest.html -- TogoWS RESTful API
+* http://togows.dbcls.jp/site/en/rest.html -- TogoWS RESTful API to retriev and search database entry in life science
 
 
-= To build the R package =
+= To build and install the R package =
 
 $ R CMD build togows
+$ R CMD install togows
