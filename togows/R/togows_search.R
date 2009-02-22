@@ -1,7 +1,7 @@
 require("RUcrl")
 
 `togows_search` <-
-function(db, query_string = NULL, offset = FALSE, num = 10, count = FALSE)
+function(db, query_string = NULL, offset = FALSE, limit = 10, count = FALSE)
 {
   base_url <- "http://togows.dbcls.jp/search"
   search_url <- ""
@@ -12,7 +12,7 @@ function(db, query_string = NULL, offset = FALSE, num = 10, count = FALSE)
   }
   
   if (offset) {
-    search_url <- paste(search_url, paste(offset, num, sep=','), sep='/')
+    search_url <- paste(search_url, paste(offset, limit, sep=','), sep='/')
   } else if (count) {
     search_url <- paste(search_url, 'count', sep='/')
   }

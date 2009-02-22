@@ -1,20 +1,20 @@
 \name{togows_search}
 \alias{togows_search}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{ ~~function to do ... ~~ }
+\title{ Database search for life science db via TogoWS RESTful API }
 \description{
   ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-togows_search(db, query_string = NULL, offset = FALSE, num = 10, count = FALSE)
+togows_search(db, query_string = NULL, offset = FALSE, limit = 10, count = FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{db}{ ~~Describe \code{db} here~~ }
-  \item{query_string}{ ~~Describe \code{query_string} here~~ }
-  \item{offset}{ ~~Describe \code{offset} here~~ }
-  \item{num}{ ~~Describe \code{num} here~~ }
-  \item{count}{ ~~Describe \code{count} here~~ }
+  \item{db}{ Database name }
+  \item{query_string}{ keywords or query in Common Query Language }
+  \item{offset}{ Offset  }
+  \item{limit}{ Limit }
+  \item{count}{ count }
 }
 \details{
   ~~ If necessary, more details than the description above ~~
@@ -39,7 +39,7 @@ togows_search(db, query_string = NULL, offset = FALSE, num = 10, count = FALSE)
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function(db, query_string = NULL, offset = FALSE, num = 10, count = FALSE)
+function(db, query_string = NULL, offset = FALSE, limit = 10, count = FALSE)
 {
   base_url <- "http://togows.dbcls.jp/search"
   search_url <- ""
@@ -50,7 +50,7 @@ function(db, query_string = NULL, offset = FALSE, num = 10, count = FALSE)
   }
   
   if (offset) {
-    search_url <- paste(search_url, paste(offset, num, sep=','), sep='/')
+    search_url <- paste(search_url, paste(offset, limit, sep=','), sep='/')
   } else if (count) {
     search_url <- paste(search_url, 'count', sep='/')
   }
