@@ -7,3 +7,13 @@ TogoWS REST API for R by Mitsuteru Nakao <n@bioruby.org> <mn@kazusa.or.jp> <mn@d
 
 $ R CMD build togows
 $ R CMD install togows
+
+
+= Usage =
+
+library(togows)
+togows_entry('ncbi-pubmed', '1') 
+togows_entry('ncbi-pubmed', '1', 'title') 
+togows_entry('ncbi-pubmed', '1', 'authors') 
+togows_entry('ncbi-pubmed', '1', 'so') 
+
