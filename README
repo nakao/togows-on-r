@@ -17,3 +17,10 @@ togows_entry('ncbi-pubmed', '1', 'title')
 togows_entry('ncbi-pubmed', '1', 'authors') 
 togows_entry('ncbi-pubmed', '1', 'so') 
 
+Same as the following script.
+
+curl http://togows.dbcls.jp/entry/ncbi-pubmed/1
+curl http://togows.dbcls.jp/entry/ncbi-pubmed/1/title
+curl http://togows.dbcls.jp/entry/ncbi-pubmed/1/authors
+curl http://togows.dbcls.jp/entry/ncbi-pubmed/1/so
+
